@@ -1,17 +1,17 @@
-import { Link } from "react-router-dom";
+//import { Link} from "react-router-dom";
 export default function Navbar(props) {
   // var colormode = "dark";
   return (
     <nav className={`navbar navbar-expand-lg  bg-${props.mode} `}>
       <div className="container-fluid">
-        <Link
+        <a
           className={`navbar-brand text-${
             props.mode === "dark" ? "light" : "dark"
           }`}
-          to="/"
+          href="/"
         >
           Utills
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -29,26 +29,26 @@ export default function Navbar(props) {
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link
+              <a
                 className={`nav-link active text-${
                   props.mode === "dark" ? "light" : "dark"
                 }`}
                 aria-current="page"
-                to="/"
+                href="/"
               >
                 Home
-              </Link>
+              </a>
             </li>
-            <li className="nav-item">
-              <Link
+            {/* <li className="nav-item">
+              <a
                 className={`nav-link text-${
                   props.mode === "dark" ? "light" : "dark"
                 }`}
-                to="/about"
+                href="/about"
               >
                 About
-              </Link>
-            </li>
+              </a>
+            </li> */}
           </ul>
           <form
             className={`d-flex text-${
